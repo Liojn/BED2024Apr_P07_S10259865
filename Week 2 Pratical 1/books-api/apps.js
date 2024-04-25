@@ -67,3 +67,10 @@ if (bookIndex !== -1) {
     res.status(404).send('Book not found'); // Send error for non-existent book
 }
 });
+
+//Part 4
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
+});
+
+//Part 5
