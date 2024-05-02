@@ -4,8 +4,8 @@ const booksController = require("./controllers/booksController"); // Import cont
 const validateBook = require("./middlewares/validateBook");
 
 const app = express();
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.json()); // Parse incoming JSON data in request body
+app.use(bodyParser.urlencoded({ extended: true })); // For form data handling
 
 app.get("/books", booksController.getAllBooks);
 app.get("/books/:id", booksController.getBookById);
